@@ -65,3 +65,15 @@ piping<-mysample %>%
 #mysample4<-summary(mysample3)
 #print(mysample4)
 
+mysample2 <- mysample %>%
+  arrange(airline) %>%
+  filter(incidents_85_99 > 10) %>%
+  rename(seats = avail_seat_km_per_week) %>%
+  select(incidents_00_14, incidents_85_99) %>%
+  summary() %>%
+  print()
+
+
+
+
+
