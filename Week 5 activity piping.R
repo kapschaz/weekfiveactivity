@@ -9,7 +9,7 @@
 
 #Read and write a comma separated value file. This is a special case of read.table/ write.table.	
 #datasetname <- read.csv(‘file.csv’)
-#write.csv(datasetname, ‘file.csv’)
+#write.csv(datasetname, ‘file.csv’) hhhhhhhh
 
 #Read and write an R data file, a file type special for R.	
 #load(‘file.RData’)
