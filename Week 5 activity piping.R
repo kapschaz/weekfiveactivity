@@ -21,19 +21,25 @@
 
 #TASK: run the code below to get and save the dataset
 download.file(url = "https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv", destfile = "airline_safety.csv")
+
+
 #Then you need to name your dataset
-airline_safety<- read.csv("airline_safety.csv")
+airline_safety<- read.csv("airline_safety.csv") 
 
 #TASK: take a look at the airline safety data. 
 
-
 #TASK: Install and call the dplyr package. 
+# Install the dplyr package
 
+install.packages("dplyr")
+
+library(dplyr)
 
 #Let's make a random sample of our data and save it
 mysample<-sample_n(airline_safety, size=15, replace = FALSE, weight = NULL, .env = NULL)
 
 #TASK: Save the new sample as a csv file
+write.csv(mysample, "mysample.csv")
 
 #Now let's have some fun with *piping*
 
@@ -51,11 +57,11 @@ piping<-mysample %>%
   print()
 
 #TASK: revise this code chunk using piping
-mysample2<-mysample
-arrange(mysample2, airline)
-mysample2<-filter(mysample2, incidents_85_99>10)
-mysample2<-rename(mysample2, seats = avail_seat_km_per_week)
-mysample3<-select(mysample2, incidents_00_14, incidents_85_99)
-mysample4<-summary(mysample3)
-print(mysample4)
+#mysample2<-mysample
+#arrange(mysample2, airline)
+#mysample2<-filter(mysample2, incidents_85_99>10)
+#mysample2<-rename(mysample2, seats = avail_seat_km_per_week)
+#mysample3<-select(mysample2, incidents_00_14, incidents_85_99)
+#mysample4<-summary(mysample3)
+#print(mysample4)
 
