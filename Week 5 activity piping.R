@@ -28,6 +28,8 @@ airline_safety<- read.csv("airline_safety.csv")
 
 #TASK: take a look at the airline safety data. 
 
+head(airline_safety) 
+
 #TASK: Install and call the dplyr package. 
 # Install the dplyr package
 
